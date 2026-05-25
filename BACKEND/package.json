@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend of reviora",
+  "keywords": [
+    "spaced_repitition",
+    "notes_taking"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/gauravpurohit685/Reviora.git"
+  },
+  "license": "ISC",
+  "author": "Gaurav Purohit",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
