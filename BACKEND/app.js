@@ -1,17 +1,13 @@
 // important requires
 const connectDB = require("./src/config/database");
 const express = require("express");
-
+var cookieParser = require("cookie-parser")
 
 const app = express();
 
-
-
-
-
-
-
-
+// using middleware express.json()
+app.use(express.json());
+app.use(cookieParser());
 
 // database connection
 connectDB().then(() => {
@@ -25,5 +21,3 @@ connectDB().then(() => {
 })
 
 
-
-// mongodb+srv://gauravpurohit685_db_user:j77Ylcp9pwHp3jAW@revioracluster.0dqz7yz.mongodb.net/

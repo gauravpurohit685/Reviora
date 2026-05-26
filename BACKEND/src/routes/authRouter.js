@@ -6,9 +6,6 @@ require("dotenv").config();
 
 const authRouter = express.Router();
 
-
-authRouter.use(express.json());
-
 authRouter.post("/signup", async (req, res) => {
     try{
         // validation logic to be added here
@@ -56,7 +53,7 @@ authRouter.post("/login", async (req, res) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: true,
+            secure: false,
             sameSite: "strict"
         });
         res.send("user logged in successfully!");
