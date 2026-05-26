@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const connectDB = async() => {
-    await mongoose.connect("mongodb+srv://gauravpurohit685_db_user:j77Ylcp9pwHp3jAW@revioracluster.0dqz7yz.mongodb.net/reviora");
+    await mongoose.connect(process.env.DATABASE_URL);
 }
 
 module.exports = connectDB;
