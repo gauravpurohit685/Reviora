@@ -28,7 +28,7 @@ connectDB().then(() => {
     })
 })
 .catch((err) => {
-    console.log("Sorry the following error occured: ",err);
+    console.log("Sorry the following error occured: " , err);
 })
 
 

@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-const gapSchema = new mongoose.Schema({
+
+// schema for gaps data
+const gapsSchema = new mongoose.Schema({
 
     userId: {
         type: mongoose.Schema.Types.ObjectId,

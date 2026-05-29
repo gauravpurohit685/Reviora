@@ -1,11 +1,13 @@
 const express = require("express");
-const profileRouter = express.Router();
 const User = require("../models/userSchema");
 const userAuth = require("../middleware/userAuth");
 const profileValidator = require("../validator/profileValidator");
 
-profileRouter.user("/profile", userAuth);
+const profileRouter = express.Router();
 
+profileRouter.use("/profile", userAuth);
+
+// route to get the profile data
 profileRouter.get("/profile/view", async (req, res) =>{
         try{    
             const {firstName, lastName, emailId} = req.user;
@@ -18,6 +20,7 @@ profileRouter.get("/profile/view", async (req, res) =>{
     }
 );
 
+// route to update the profile data
 profileRouter.patch("/profile/edit", async (req, res) => {
     try{
         const allowedUpdates = ["firstName","lastName"];
