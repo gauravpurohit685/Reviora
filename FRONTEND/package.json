@@ -21,6 +21,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "daisyui": "^5.5.20",
     "parcel": "^2.16.4"
   },
   "dependencies": {

@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 const authValidator = require("../validator/authValidator");
 const Gaps = require("../models/gapsSchema");
+const userAuth = require("../middleware/userAuth");
 require("dotenv").config();
 
 
@@ -86,5 +87,13 @@ authRouter.post("/logout", async (req, res) => {
     }
 });
 
+
+//verfication route
+authRouter.get("/verify", userAuth, async (req, res) => {
+    res.status(200).send({
+        status: true,
+        message: "User perfectly authorized!"
+    })
+});
 
 module.exports = authRouter;

@@ -726,20 +726,22 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const App = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "text-blue-900 text-center",
-        children: "This is just the configuration"
-    }, void 0, false, {
-        fileName: "app.js",
-        lineNumber: 10,
-        columnNumber: 9
-    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            className: "text-blue-900 text-center",
+            children: "This is just the configuration"
+        }, void 0, false, {
+            fileName: "app.js",
+            lineNumber: 11,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false);
 };
 _c = App;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 20,
+    lineNumber: 22,
     columnNumber: 13
 }, undefined));
 var _c;

@@ -7,9 +7,11 @@ const App = () => {
 
 
     return (
-        <h1 className="text-blue-900 text-center">
-            This is just the configuration
-        </h1>
+        <>
+            <h1 className="text-blue-900 text-center">
+                This is just the configuration
+            </h1>
+        </>
     )
 }
 
