@@ -2,6 +2,7 @@
 import ReactDom from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import HeaderComponent from "./src/components/HeaderComponent";
+import userContext from "./src/context/userContext";
 
 // This is the main component
 const App = () => {
