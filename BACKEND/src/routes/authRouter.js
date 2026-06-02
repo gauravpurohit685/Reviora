@@ -91,7 +91,7 @@ authRouter.post("/logout", async (req, res) => {
 //verfication route
 authRouter.get("/verify", userAuth, async (req, res) => {
     res.status(200).send({
-        status: true,
+        success: true,
         message: "User perfectly authorized!"
     })
 });
