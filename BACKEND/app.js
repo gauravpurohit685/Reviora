@@ -9,6 +9,16 @@ const revisionRouter = require("./src/routes/revisionRouter");
 
 const app = express();
 
+const cors = require("cors");
+
+//cors middleware
+app.use(
+    cors({
+        origin: "http://localhost:1234",
+        credentials: true
+    })
+);
+
 // using middleware express.json()
 app.use(express.json());
 app.use(cookieParser());

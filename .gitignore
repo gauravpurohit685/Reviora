@@ -1,5 +1,6 @@
 BACKEND/node_modules/
 BACKEND/.env
+FRONTEND/.env
 FRONTEND/node_modules/
 FRONTEND/.parcel-cache/
 FRONTEND/dist/

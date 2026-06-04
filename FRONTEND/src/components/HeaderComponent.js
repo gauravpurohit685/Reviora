@@ -4,7 +4,7 @@ import {LuSun, LuMoon} from "react-icons/lu";
 
 
 // Internal Imports
-import changeTheme from "../hook/changeTheme";
+import usechangeTheme from "../util/usechangeTheme";
 import userContext from "../context/userContext";
 
 
@@ -15,7 +15,7 @@ const HeaderComponent = () => {
     const [theme, setTheme] = useState("dark");
 
     const toogleTheme = () => {
-        changeTheme(theme, setTheme);
+        usechangeTheme(theme, setTheme);
     }
 
     return (

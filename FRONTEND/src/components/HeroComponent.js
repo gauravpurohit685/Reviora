@@ -45,12 +45,14 @@ const HeroComponent = () => {
                 </div>
             </div>
 
+            {/* This div is self created */}
             <div className="bg-base-100 py-12">
                 <h2 className="text-4xl font-bold text-center">
                     See Reviora In Action
                 </h2>
             </div>
-
+            
+            {/* Hero section from DaisyUI */}
             <div className="hero bg-base-200">
                     <div className="hero-content flex-col lg:flex-row">
                         <img
@@ -66,7 +68,8 @@ const HeroComponent = () => {
                         </div>
                     </div>
                 </div>
-
+            
+            {/* Hero section from DaisyUI */}
             <div className="hero bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img
@@ -82,13 +85,15 @@ const HeroComponent = () => {
                         </div>
                     </div>
             </div>
-
+            
+            {/* This div is created by myself */}
             <div className="bg-base-100 py-12">
                 <h2 className="text-4xl font-bold text-center">
                     How Reviora Works
                 </h2>
             </div>
-
+            
+            {/* This is the step from DaisyUI */}
             <div className="flex justify-center bg-base-200 p-16">
                 <ul className="steps steps-vertical">
                     <li className="step step-primary">Create Notes</li>
@@ -98,7 +103,7 @@ const HeroComponent = () => {
                 </ul>
             </div>
 
-           
+           {/* Footer from DaisyUI */}
             <footer className="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
             <div className="text-xl italic max-w-2xl text-center">
                 Knowledge is not built when you learn. It is built when you remember.

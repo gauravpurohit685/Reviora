@@ -8,10 +8,21 @@ import HeaderComponent from "./src/components/HeaderComponent";
 import userContext from "./src/context/userContext";
 import AppShimmer from "./src/shimmer/AppShimmer";
 import HeroComponent from "./src/components/HeroComponent";
+import LoginComponent from "./src/components/LoginComponent";
+import SignupComponent from "./src/components/SignupComponent";
 
 // This is the main component
 const App = () => {
+    return (
+            <div>
+                <HeaderComponent />
+                <Outlet />
+            </div>  
+    )
+}
 
+// This is the root component
+const Root = () => {
     const [loadState, setLoadState] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -22,7 +33,7 @@ const App = () => {
 
     const verifyToken = async () => {
         try{
-            const msg = await fetch("localhost", {
+            const msg = await fetch(process.env.VERIFY_API, {
                 credentials: "include"
             });
 
@@ -47,7 +58,6 @@ const App = () => {
             setLoadState(false);
         }
     }
-    
 
     if(loadState){
         return (
@@ -55,20 +65,12 @@ const App = () => {
         )
     }
 
-
-    return (
-
-        <userContext.Provider value = {{isUserLoggedIn: isAuthenticated, setIsAuthenticated}}>
-            <div>
-                <HeaderComponent />
-                <Outlet />
-            </div>
+    return( 
+        <userContext.Provider value= {{isUserLoggedIn:isAuthenticated, setIsAuthenticated}}>
+            <RouterProvider router={appRouter} />
         </userContext.Provider>
-        
     )
 }
-
-
 
 const appRouter = createBrowserRouter([
     {
@@ -80,10 +82,18 @@ const appRouter = createBrowserRouter([
                 element: <HeroComponent />
             }
         ]
+    },
+    {
+        path: "/login",
+        element: <LoginComponent />
+    },
+    {
+        path: "/signup",
+        element: <SignupComponent />
     }
-])
+]);
 
 
 // Root render
 const root = ReactDom.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter}/>);
+root.render(<Root />);
