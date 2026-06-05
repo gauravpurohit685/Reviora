@@ -102,10 +102,14 @@ notesRouter.delete("/notes/:noteId", async (req, res) => {
             userId: req.user._id
         });
 
-        res.send("Note deleted successfully!");
+        res.json({
+            message: "Note deleted successfully!"
+        });
     }
     catch(err){
-        res.status(400).send("Error deleting the note: " + err.message);
+        res.status(400).json({
+            message:  "Error deleting the note: " + err.message
+        });
     }
 
 });

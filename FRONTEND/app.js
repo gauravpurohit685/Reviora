@@ -10,6 +10,7 @@ import AppShimmer from "./src/shimmer/AppShimmer";
 import HeroComponent from "./src/components/HeroComponent";
 import LoginComponent from "./src/components/LoginComponent";
 import SignupComponent from "./src/components/SignupComponent";
+import NotesComponent from "./src/components/NotesComponent";
 
 // This is the main component
 const App = () => {
@@ -81,6 +82,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/",
                 element: <HeroComponent />
+            },
+            {
+                path: "/notes",
+                element: <NotesComponent />
             }
         ]
     },

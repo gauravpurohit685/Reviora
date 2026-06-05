@@ -9,14 +9,14 @@ import userContext from "../context/userContext";
 
 const LoginComponent = () => {
 
-    // use of the hooks..
+    // Use of the hooks..
     const [isLoginSuccessful, setIsLoginSuccessful] = useState(true);
     const [emailId, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const {setIsAuthenticated} = useContext(userContext);
     const navigate = useNavigate();
 
-    // handler for clicking the login button
+    // Handler for clicking the login button
     const loginHandler = () => {
         login(emailId, password, setIsAuthenticated, navigate, setIsLoginSuccessful);
     }
