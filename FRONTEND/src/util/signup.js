@@ -1,5 +1,7 @@
 import login from "./login";
 
+// Utility function to handle the signup
+
 const signup = async (firstName, lastName, emailId, password, rePassword, setIsAuthenticated, navigate, setIsMessage, setMessage) => {
 
     try{

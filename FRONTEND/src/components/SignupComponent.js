@@ -9,6 +9,7 @@ import signup from "../util/signup";
 
 const SignupComponent = () => {
     
+    // Use of hooks
     const [firstName , setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [emailId, setEmailId] = useState("");
@@ -21,6 +22,7 @@ const SignupComponent = () => {
     const {setIsAuthenticated} = useContext(userContext);
     const navigate = useNavigate()
 
+    // Handler to handler the signup button
     const signUpHandler = () => {
         signup(firstName, lastName, emailId, password, rePassword, setIsAuthenticated, navigate, setIsMessage, setMessage);
     }

@@ -1,7 +1,7 @@
 // Import from libraries
 import { useContext, useState } from "react";
 import {LuSun, LuMoon} from "react-icons/lu";
-
+import {Link} from "react-router-dom";
 
 // Internal Imports
 import changeTheme from "../util/changeTheme";
@@ -48,8 +48,8 @@ const HeaderComponent = () => {
                         )
                         :
                         (   <>
-                                <a className="btn btn-ghost text-xl">SignUp</a>
-                                <a className="btn btn-ghost text-xl">Login</a>
+                                <Link to="/signup" className="btn btn-ghost text-xl">SignUp</Link>
+                                <Link to="/login" className="btn btn-ghost text-xl">Login</Link>
                             </>
                         )
                     }

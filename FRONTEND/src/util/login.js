@@ -1,3 +1,6 @@
+
+// Utility function to handle the login
+
 const login = async (emailId , password, setIsAuthenticated, navigate, setIsLoginSuccessful) => {
 
   try{

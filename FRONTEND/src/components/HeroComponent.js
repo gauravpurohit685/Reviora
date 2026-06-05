@@ -1,5 +1,6 @@
 // Imports from libraries
 import { useContext} from "react";
+import {Link} from "react-router-dom";
 
 // Internal imports
 import userContext from "../context/userContext";
@@ -7,7 +8,6 @@ import userContext from "../context/userContext";
 
 const HeroComponent = () => {
 
-    
     const {isUserLoggedIn} = useContext(userContext);
 
     return (
@@ -36,8 +36,8 @@ const HeroComponent = () => {
                         ):
                         (
                             <>
-                                <button className="btn btn-accent mr-2">SignUp</button>
-                                <button className="btn btn-accent ml-2">Login</button>
+                                <Link to= "/login"><button className="btn btn-accent mr-2">SignUp</button></Link>
+                                <Link to= "/signup"><button className="btn btn-accent ml-2">Login</button></Link>
                             </>
                         )
                     }

@@ -72,6 +72,7 @@ const Root = () => {
     )
 }
 
+// These are the required routes
 const appRouter = createBrowserRouter([
     {
         path: "/",

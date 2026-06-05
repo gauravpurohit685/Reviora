@@ -1,3 +1,5 @@
+// Utility function to change the theme
+
 const changeTheme = (theme, setTheme) => {
     const newTheme = theme === "light"? "dark": "light";
 

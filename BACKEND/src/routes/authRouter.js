@@ -42,8 +42,15 @@ authRouter.post("/signup", async (req, res) => {
 
     }
     catch(err){
+
+        if(err.code === 11000){
+            return res.status(400).json({
+                message: "Email already exists!"
+            })
+        }
+
         res.status(400).json({
-            message: "Error signing up" + err.message
+            message: "Error signing up: " + err.message
         })
     }
 });
@@ -80,7 +87,7 @@ authRouter.post("/login", async (req, res) => {
     }
     catch(err){ 
         res.status(400).json({
-            message: "Error logging in" + err.message
+            message: "Error logging in: " + err.message
         });
     }
 });
@@ -96,7 +103,7 @@ authRouter.post("/logout", async (req, res) => {
     }
     catch(err){
         res.status(400).json({
-            message: "Error logging out" + err.message
+            message: "Error logging out: " + err.message
         });
     }
 });

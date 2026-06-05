@@ -16,7 +16,7 @@ const LoginComponent = () => {
     const {setIsAuthenticated} = useContext(userContext);
     const navigate = useNavigate();
 
-
+    // handler for clicking the login button
     const loginHandler = () => {
         login(emailId, password, setIsAuthenticated, navigate, setIsLoginSuccessful);
     }
@@ -27,7 +27,7 @@ const LoginComponent = () => {
         <fieldset className="fieldset bg-accent border-base-300 rounded-box w-xs border p-4">
 
             <label className="label text-accent-content">Email</label>
-            <input type="email" className="input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" className="input" placeholder="Email" value={emailId} onChange={(e) => setEmail(e.target.value)} />
 
             <label className="label text-accent-content">Password</label>
             <input type="password" className="input" placeholder="Password" value = {password} onChange={(e) => setPassword(e.target.value)} />
