@@ -1,4 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+// Imports from libraries
+import {useEffect, useState } from "react";
+
+// Interanl imports
+
 
 const useNotes = () => {    
     const [mainList, setMainList] = useState([]);
@@ -32,8 +36,8 @@ const useNotes = () => {
     const search = (e) => {
         try{
             const value = e.target.value;
-            setQuery(query);
-            const newList = mainList.filter((res) => (res.title.toLowerCase().includes(query.toLowerCase())));
+            setQuery(value);
+            const newList = mainList.filter((res) => (res.title.toLowerCase().includes(value.toLowerCase())));
 
             setSecondaryList(newList);
         }

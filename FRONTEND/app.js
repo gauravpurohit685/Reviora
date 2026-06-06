@@ -11,6 +11,9 @@ import HeroComponent from "./src/components/HeroComponent";
 import LoginComponent from "./src/components/LoginComponent";
 import SignupComponent from "./src/components/SignupComponent";
 import NotesComponent from "./src/components/NotesComponent";
+import notesContext from "./src/context/notesContext";
+import NotesInfoComponent from "./src/components/NotesInfoComponent";
+import AddNotesComponent from "./src/components/AddNotesComponent";
 
 // This is the main component
 const App = () => {
@@ -26,6 +29,7 @@ const App = () => {
 const Root = () => {
     const [loadState, setLoadState] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [notes, setNotes] = useState([])
 
     useEffect(() => {
         verifyToken();
@@ -67,9 +71,11 @@ const Root = () => {
     }
 
     return( 
-        <userContext.Provider value= {{isUserLoggedIn:isAuthenticated, setIsAuthenticated}}>
-            <RouterProvider router={appRouter} />
-        </userContext.Provider>
+        <notesContext.Provider value = {{notes, setNotes}}>
+            <userContext.Provider value= {{isUserLoggedIn:isAuthenticated, setIsAuthenticated}}>
+                <RouterProvider router={appRouter} />
+            </userContext.Provider>
+        </notesContext.Provider>
     )
 }
 
@@ -86,6 +92,14 @@ const appRouter = createBrowserRouter([
             {
                 path: "/notes",
                 element: <NotesComponent />
+            },
+            {
+                path: "/notes/:notesId",
+                element: <NotesInfoComponent />
+            },
+            {
+                path: "/addnotes",
+                element: <AddNotesComponent />
             }
         ]
     },

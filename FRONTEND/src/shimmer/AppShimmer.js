@@ -1,7 +1,6 @@
 const AppShimmer = () => {
     return (
-        <div>
-            This is the basic shimmer component
+        <div className="navbar bg-base-300">
         </div>
     )
 }
