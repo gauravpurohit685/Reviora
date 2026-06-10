@@ -15,14 +15,13 @@ const NotesComponent = () => {
     // The logic to handle all the fetching action is in useNotes hook
     const {mainList, secondaryList, query, search} = useNotes({setIsLoading, setIsError});
 
-    // UseEffect hook
     const {setNotes} = useContext(notesContext);
     useEffect(() => {
         setNotes(mainList)
     },[mainList, setNotes]);
 
 
-
+    // If the data is not yet fetched, we show the loader
     if(isLoading){
         return (
             <div className="flex justify-center items-center min-h-screen">
@@ -31,7 +30,7 @@ const NotesComponent = () => {
         )
     }
 
-
+    // If there is some error then we show the error message
     if(isError){
         return (
             <div className="flex justify-center items-center min-h-screen">
@@ -42,7 +41,7 @@ const NotesComponent = () => {
         )
     }
 
-
+    // If there are no notes in User's database, then this message is depicted
     if(mainList.length === 0){
         return (
             <div className="hero bg-base-200 min-h-screen">
@@ -57,7 +56,6 @@ const NotesComponent = () => {
 
     return (
         <div>
-            {/* Navbar from DaisyUI */}
             <div className="navbar bg-transparent mb-8">
                 <div className="navbar-start">
                     <p className="mr-4">Notes</p>

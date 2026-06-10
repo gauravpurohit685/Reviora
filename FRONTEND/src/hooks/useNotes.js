@@ -12,6 +12,7 @@ const useNotes = ({setIsLoading, setIsError, setErrorMessage}) => {
         fetchData();
     }, [])
 
+    // Function that fetches the notes data
     const fetchData = async () => {
 
         try{
@@ -35,10 +36,10 @@ const useNotes = ({setIsLoading, setIsError, setErrorMessage}) => {
             console.log("Error: " + err.message);
             setIsLoading(false);
             setIsError(true);
-            setErrorMessage(true);
         }
     }
 
+    // Function that facilitates search feature
     const search = (e) => {
         try{
 

@@ -76,7 +76,7 @@ const NotesInfoComponent = () => {
         notesDelete({API, setIsError, setErrorMessage, navigate});
     }
 
-
+    // Until the API is fetched, this is shown
     if(isLoading){
         return (
             <div className="flex justify-center items-center min-h-screen">
@@ -85,6 +85,7 @@ const NotesInfoComponent = () => {
         )
     }
 
+    // If there is some error message, the this is shown
     if(isMainError){
         return (
             <div className="flex justify-center items-center min-h-screen">

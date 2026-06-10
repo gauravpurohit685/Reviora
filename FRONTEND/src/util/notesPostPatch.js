@@ -1,3 +1,5 @@
+// Utility function to update or post the notes
+
 const notesPostPatch = async ({titleState, descriptionState, setIsError, setErrorMessage, navigate, API, mtod, setIsLoading}) => {
 
     try{
