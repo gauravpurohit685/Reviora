@@ -132,7 +132,7 @@ const NotesInfoComponent = () => {
 
             {
                 isError?
-                (<p>
+                (<p className="text-center text-error">
                     {errorMessage}
                 </p>):
                 (

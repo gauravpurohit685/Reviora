@@ -14,6 +14,7 @@ import NotesComponent from "./src/components/NotesComponent";
 import notesContext from "./src/context/notesContext";
 import NotesInfoComponent from "./src/components/NotesInfoComponent";
 import AddNotesComponent from "./src/components/AddNotesComponent";
+import ProfileComponent from "./src/components/ProfileComponent";
 
 // This is the main component
 const App = () => {
@@ -100,6 +101,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/addnotes",
                 element: <AddNotesComponent />
+            },
+            {
+                path: "/profile",
+                element: <ProfileComponent />
             }
         ]
     },
