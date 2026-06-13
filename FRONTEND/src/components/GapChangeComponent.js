@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// This component depicts the current gaps schema and and option to change the gaps schema according to you
+
 const GapChangeComponent = () => {
     
     const [gaps, setGaps] = useState([]);

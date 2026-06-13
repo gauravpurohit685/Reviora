@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/userSchema");
 require("dotenv").config();
 
-
+// This is the middleware for user authentication
 
 const userAuth = async (req, res, next) => {
     try{

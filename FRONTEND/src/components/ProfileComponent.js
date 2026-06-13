@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import {useNavigate } from "react-router-dom";
 
+
+// This component tells about the profile data and the options to change some of the fields
 const ProfileComponent = () => {
 
     const fetchData = async () => {

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import useRevision from "../hooks/useRevision";
 import RevisionCardComponent from "./RevisionCardComponent";
 
+
+// This component tells about the revision
 const RevisionComponent = () => {
 
 

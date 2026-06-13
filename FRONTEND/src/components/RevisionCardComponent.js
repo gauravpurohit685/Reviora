@@ -1,3 +1,5 @@
+// This is the card component for the revsion data
+
 const RevisionCardComponent = (props) => {
 
     const {createdAt, material} = props;

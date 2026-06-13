@@ -1,3 +1,5 @@
+// This is the validator for notes data
+
 const noteValidator = (data) => {
     const {title, description} = data;
 

@@ -104,6 +104,7 @@ notesRouter.patch("/notes/:noteId", async (req, res) => {
     
 });
 
+// route to delete the notes
 notesRouter.delete("/notes/:noteId", async (req, res) => {
 
     try{

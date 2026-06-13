@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import notesPostPatch from "../util/notesPostPatch";
 import notesDelete from "../util/notesDelete";
 
+// this component give details about a particular note item
+
 const NotesInfoComponent = () => {
 
     const {notesId} = useParams();

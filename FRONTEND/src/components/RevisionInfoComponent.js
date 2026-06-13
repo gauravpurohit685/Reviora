@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
+
+// This is the component for a particular revision item
 const RevisionInfoComponent = () => {
 
     const [isLoading, setIsLoading] = useState(true);

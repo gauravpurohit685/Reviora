@@ -1,3 +1,5 @@
+// This is the validator for profile data
+
 const profileValidator = (data) => {
     const {firstName, lastName} = data;
     if(firstName){

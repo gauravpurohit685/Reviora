@@ -1,3 +1,5 @@
+// This is the js utility function to get the older dates based on gaps
+
 const getRevisionDates = (gaps) => {
 
     const today = new Date();

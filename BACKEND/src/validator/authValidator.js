@@ -1,3 +1,5 @@
+// This is the validator for signup
+
 const authValidator = (data) => {
     const {firstName, lastName, emailId, password} = data;
 
