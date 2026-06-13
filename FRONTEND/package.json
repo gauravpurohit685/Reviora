@@ -18,12 +18,15 @@
   "author": "Gaurav Purohit",
   "type": "commonjs",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "daisyui": "^5.5.20",
     "parcel": "^2.16.4"
   },
+  
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.0",
     "dotenv": "^17.4.2",
