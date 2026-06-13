@@ -14,7 +14,7 @@ const cors = require("cors");
 // cors middleware
 app.use(
     cors({
-        origin: "https://reviora.onrender.com",
+        origin: "https://reviora-neon.vercel.app",
         credentials: true,
         methods: ["GET", "POST", "PATCH", "DELETE"]
     })
