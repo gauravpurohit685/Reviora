@@ -22,4 +22,4 @@ const authValidator = (data) => {
     }
 };
 
-module.exports = authValidator
+module.exports = authValidator;
