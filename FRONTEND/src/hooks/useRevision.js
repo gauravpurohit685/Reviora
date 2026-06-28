@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Hook handling the revision concept
 const useRevision = ({setIsLoading, setIsError}) => {
     const [reqMaterial, setReqMaterial] = useState([]);
     const [isEmpty, setIsEmpty] = useState(false);
