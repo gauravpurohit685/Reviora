@@ -10,6 +10,13 @@ require("dotenv").config();
 
 const authRouter = express.Router();
 
+// health route
+authRouter.get("/health", async(req, res) => {
+    res.status(200).json({
+        message: "Everything is working fine!"
+    })
+});
+
 // signup route
 authRouter.post("/signup", async (req, res) => {
     try{
