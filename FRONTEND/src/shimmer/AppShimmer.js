@@ -2,7 +2,8 @@
 
 const AppShimmer = () => {
     return (
-        <div className="navbar bg-base-300">
+        <div class="flex min-h-screen items-center justify-center">
+            <span class="loading loading-spinner loading-lg"></span>
         </div>
     )
 }
